@@ -10,7 +10,7 @@ Multi-camera people tracking (MCPT) has become increasingly relevant in recent y
 
 ## Installation
 
-1. Run `git clone ???`
+1. Run `git clone https://github.com/amagasaki-lab/STaG-MCPT.git`
 2. Install required packages `pip install -r requirements.txt`
 
 
