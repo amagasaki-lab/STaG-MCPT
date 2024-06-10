@@ -57,16 +57,3 @@ def display_result(gt, all_output, alpha, beta):
     print(f'{count}, {rank1_count}, rank-1: {rank1_count/count}, rank-2: {(rank1_count+rank2_count)/count}, rank-3: {(rank1_count+rank2_count+rank3_count)/count}')
     #alpha_beta.append([alpha, beta, rank1_count/count, (rank1_count+rank2_count)/count, (rank1_count+rank2_count+rank3_count)/count])
     return result
-
-def gt_individual(self, gt, query_id):
-    gt_query = gt[gt['Query'] == query_id]
-    gt_gallery = gt_query['Gallery']
-    gt_list = gt_gallery.values.tolist()
-    self.file.write(f'正解のGallery  {gt_list}\n') #
-    self.file.write(f'\n') #
-
-def extract_overlap(df, query_id):
-    condition = df['Id'] == query_id
-    overlap = df.loc[condition, 'overlap']
-    overlap = overlap.iloc[-1]
-    return overlap
